@@ -32,16 +32,28 @@ def Draw_centered_circle(x ,y, rad, color):
     t.left(90)
     t.forward(rad)
     t.right(180)
-    
 
-
-def Draw_smiley(x,y,rad,color):
+def Draw_smiley(x,y,rad,color):    
     Draw_centered_circle(x,y,rad,"yellow")
+    Draw_centered_circle(x,y,rad/10,"red") #nose
 
-    # nose
-    Draw_centered_circle(x,y,rad/10,"red")
+    quarter = rad/4
+    tenth = rad /10
+    Draw_eye(x+quarter+tenth, y+quarter, quarter, "blue")
+    Draw_eye(x-quarter-tenth, y+quarter, quarter, "blue")
+
+
+def Draw_eye(x,y,radius, eye_color):
+    Draw_centered_circle(x,y,radius,"white")
+    Draw_centered_circle(x,y,radius/2, eye_color)
+    Draw_centered_circle(x,y,radius/4, "black")
+
+def Tweek(speed,tracer):
+    t.speed(speed)
+    # t.tracer(tracer)
 
 def main():
+    Tweek(0,False)
     Draw_smiley(0,0,200,"yellow")
     input("...")
     
