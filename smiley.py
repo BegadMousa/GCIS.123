@@ -3,7 +3,7 @@ import turtle
 
 t = turtle.Turtle()
 
-def Draw_circle(x_cord , y_cord, rad, color):
+def Draw_circle(x_cord, y_cord, rad, color):
     t.up()
     t.goto(x_cord, y_cord)
     t.fillcolor(color)
