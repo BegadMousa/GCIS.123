@@ -1,6 +1,3 @@
-from webbrowser import get
-
-
 '''
     This program is done as the first part of the class work week 2 GCIS 123
 '''
